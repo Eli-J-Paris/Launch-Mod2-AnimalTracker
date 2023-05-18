@@ -12,10 +12,15 @@
 **Important** Answer these questions in this file on your `main` branch.  When finished with the questions, commit and push your main branch.  You do not need to create a pull request yet!
 
 1. What does TDD stand for?
+TDD stand for Test Driven Development and is the process of writing tests BEFORE the code
 
 1. What are three benefits of using TDD?
+    1.TDD forces the developer to really think about what they want the code to look like
+    2.It also allows the devloper to break down problems easier than just writing the code outright with out knowing what the program might look like
+    3.This also forces the developer to only write the code that they need and helps to prevent going down unproductive trains of thought when writing code
 
 1. Imagine you are in an interview.  The interviewer asks: How do you use TDD? How would you answer?
+    With my skills in test driven development I would write tests for a baseline for how I am invisioning the main code to look like. This will allow me to focus more clearly on what needs to be down and gain a better visual picture of how a the code might look like. Likewise, when the code is written I can fo forward with confidence that the code works when I try refeactoring or implementing new features.
 
 1. For the class below, outline the tests you would need.  Try to use as much C# syntax as possible. The first test has been provided for you. (this question is worth 4 points)
 ```c#
