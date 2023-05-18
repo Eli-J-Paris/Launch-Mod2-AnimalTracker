@@ -59,17 +59,56 @@ public class Dog
 [Fact]
 public void DogHasNameAttribute()
 {
-    Dog dog = new Dog("Nile", "Golden Retriever");
+    Dog dog1 = new Dog("Nile", "Golden Retriever");
 
     Assert.Equal("Nile", dog.Name);
+    Assert.Equal("Golden Retriever", dog1.Breed);
 }
+
+[Fact]
+public void EatMethodMakesIsHungryFalse ()
+{
+    Dog dog1 = new Dog("Nile", "Golden Retriever");
+
+    dog1.Eat();
+
+    Assert.False(dog1.IsHungry);
+    //or
+    Assert.Equal(false, dog1.IsHungry);
+
+}
+
+[Fact]
+public void SleepMethodMakesIsHungryTrue()
+{
+    Dog dog1 = new Dog("Nile", "Golden Retriever");
+    
+    dog1.Sleep();
+
+    Assert.True(dog1.IsHungry);
+    //or
+    Assert.Equal(true, dog1.IsHungry);
+}
+
+[Fact]
+public void SleepMethodReturnsString()
+{
+    Dog dog1 = new Dog("Nile", "Golden Retriever");
+    
+    string bark = dog1.Speak();
+
+    Assert.Equal("Bark Bark!", bark);
+
+}
+
 ```
 
 5. What is a merge conflict, and when might you encounter one?
-
+    A merge conflict can happen when you try to merge branchs into one another. This is caused by code exsisting in the same place on both branches.
 1. You and a partner are working on a project together.  Your partner is working on aa-branch; you are working on bb-branch.  In as much detail as possible, describe how you both would get your work combined onto the main branch.
-
-1. Why is it good practice to have someone else approve and/or merge your PR?  
+    I would first commit and push up my code to github and make a pullrequest from the branch i was working on to the main branch. this will allow my partner to review my code and "ask" for approvel to merge it. my partner would do the same thing i just desribed but for their branch. I now have a pull request to review and potenially approve. if we both find that code can be merged into the main branch one or both of us might run into a merge conflict if we wrote code in the same spot
+1. Why is it good practice to have someone else approve and/or merge your PR?
+    Its good practice because communcation is key when working on a team. Merging your own branch has more potential to create problems for your team when trying to implement their code. It is vitial to get another set of eyes on your code to avoid communcation errors as much as possible.
   
 **Before moving on to the next section, commit your work and push your main branch!**
   
